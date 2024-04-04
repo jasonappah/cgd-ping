@@ -42,10 +42,11 @@ const main = async () => {
     console.log(`Closest target: ${closestTarget}`)
     if (MSG_WHEN_AT_X_NUM_DONATIONS.includes(global_num_donations)) {
         messagesToSend.push(`UTD has reached ${global_num_donations} donations which is ${closestTarget - global_num_donations} away from ${closestTarget}! @here`)
-    } else {
-        messagesToSend.push(`UTD is at ${global_num_donations} donations.`)
-    }
-    messagesToSend.push(`We have raised $${org_total_donations} from ${org_num_donations} donations!`)
+    } 
+    // else {
+    //     messagesToSend.push(`UTD is at ${global_num_donations} donations.`)
+    // }
+    // messagesToSend.push(`We have raised $${org_total_donations} from ${org_num_donations} donations!`)
     console.log({messagesToSend})
 
     if (messagesToSend.length > 0) {
