@@ -51,6 +51,8 @@ const main = async () => {
 
     if (messagesToSend.length > 0) {
         await sendDiscordMessage(messagesToSend.join('\n\n'))
+    } else {
+        console.log('No messages to send.')
     }
 }
 
