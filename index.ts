@@ -1,6 +1,8 @@
 const ALL_GIVING_STATS = `https://givingday.utdallas.edu/public_ajax/givingdays/83844/stats`
 const ORG_GIVING_STATS = `https://givingday.utdallas.edu/public_ajax/givingdays/83967/stats`
-const DISC_WEBHOOK = 'https://discord.com/api/webhooks/1225465723376369695/MUImhLyi7aInL9oHefT1ajXbC51Lw-ZBEHHIP9xMFghokiEeOALCTkG2QtOO_y_ltXJg'
+const DISC_WEBHOOK = process.env.DISC_WEBHOOK
+
+if (!DISC_WEBHOOK) throw new Error("Missing Discord webhook URL.")
 
 
 const MSG_WHEN_AT_X_NUM_DONATIONS = [1958, 1965, 1968, 2014, 2019, 2023]
